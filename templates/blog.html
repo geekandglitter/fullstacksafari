@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+        <div class="tm-header">
+            <div class="container-fluid">
+                <div class="tm-header-inner">
+                    <a href="#" class="navbar-brand tm-site-name">Full Stack Safari</a>
+
+                    <!-- navbar -->
+                    <nav class="navbar tm-main-nav">
+
+                        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
+                            &#9776;
+                        </button>
+
+                        <div class="collapse navbar-toggleable-sm" id="tmNavbar">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item">
+                                    <a href="/" class="nav-link">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="about.html" class="nav-link">About</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a href="blog.html" class="nav-link">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="tm-blog-img-container">
+
+        </div>
+
+        <section class="tm-section">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-xl-9">
+
+
+                        <div class="row tm-margin-t-big">
+                     <!--    Linda added this  -->
+                          {% for postbody,posttitle in bodiestitles %}
+                            <p><b>
+
+                            {{ posttitle | safe }}
+
+                            </b></p>
+
+                            {{ postbody |safe|striptags | truncatewords:30|linebreaks }}
+
+                              <hr>
+
+                          {% endfor %}
+                      <!--    end of Linda added this  -->
+                        </div>
+
+                    </div>
+
+                    <aside class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 tm-aside-r">
+
+                        <div class="tm-aside-container">
+                            <h3 class="tm-gold-text tm-title">
+                                Categories
+                            </h3>
+                            <nav>
+                                <ul class="nav">
+                                    <li><a href="#" class="tm-text-link">Lorem ipsum dolor sit</a></li>
+                                    <li><a href="#" class="tm-text-link">Tincidunt non faucibus placerat</a></li>
+                                    <li><a href="#" class="tm-text-link">Vestibulum tempor ac lectus</a></li>
+                                    <li><a href="#" class="tm-text-link">Elementum egestas dui</a></li>
+                                    <li><a href="#" class="tm-text-link">Nam in augue consectetur</a></li>
+                                    <li><a href="#" class="tm-text-link">Fusce non turpis euismod</a></li>
+                                    <li><a href="#" class="tm-text-link">Text Link Color #006699</a></li>
+                                </ul>
+                            </nav>
+                            <hr class="tm-margin-t-small">
+                            <h3 class="tm-gold-text tm-title tm-margin-t-small">
+                                Useful Links
+                            </h3>
+                            <nav>
+                                <ul class="nav">
+                                    <li><a href="#" class="tm-text-link">Suspendisse sed dui nulla</a></li>
+                                    <li><a href="#" class="tm-text-link">Lorem ipsum dolor sit</a></li>
+                                    <li><a href="#" class="tm-text-link">Duiss nec purus et eros</a></li>
+                                    <li><a href="#" class="tm-text-link">Etiam pulvinar et ligula sed</a></li>
+                                    <li><a href="#" class="tm-text-link">Proin egestas eu felis et iaculis</a></li>
+                                </ul>
+                            </nav>
+                            <hr class="tm-margin-t-small">
+
+                            <div class="tm-content-box tm-margin-t-small">
+                                <a href="#" class="tm-text-link"><h4 class="tm-margin-b-20 tm-thin-font">Duis sit amet tristique #1</h4></a>
+                                <p class="tm-margin-b-30">Vestibulum arcu erat, lobortis sit amet tellus ut, semper tristique nibh. Nunc in molestie elit.</p>
+                            </div>
+                            <hr class="tm-margin-t-small">
+                            <div class="tm-content-box tm-margin-t-small">
+                                <a href="#" class="tm-text-link"><h4 class="tm-margin-b-20 tm-thin-font">Duis sit amet tristique #2</h4></a>
+                                <p>Vestibulum arcu erat, lobortis sit amet tellus ut, semper tristique nibh. Nunc in molestie elit.</p>
+                            </div>
+                            <hr class="tm-margin-t-small">
+                            <div class="tm-content-box tm-margin-t-small">
+                                <a href="#" class="tm-text-link"><h4 class="tm-margin-b-20 tm-thin-font">Duis sit amet tristique #3</h4></a>
+                                <p>Vestibulum arcu erat, lobortis sit amet tellus ut, semper tristique nibh. Nunc in molestie elit.</p>
+                            </div>
+                        </div>
+
+
+                    </aside>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- load JS files -->
+        <script src="/static/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h -->
+        <script src="/static/js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+
+
+
+{% endblock content %}

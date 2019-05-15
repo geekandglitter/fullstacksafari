@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+   <h1 style="text-align: left">  <a href="/"> Menu </a></h1>
+    <ol>
+    <li> <a href="http://127.0.0.1:8000/admin"> Admin</a></li>
+
+    <li> <a href="show_the_post_slug.html"> Display slugs</a></li>
+    <li> <a href="show_the_post_titles.html"> Display titles</a></li>
+    <li> <a href="show_the_titles_and_bodies.html"> Display titles with bodies</a></li>
+    <li> <a href="show_the_post_status.html"> Display statuses</a></li>
+
+    <li> <a href="write_a_new_post.html"> Write a New Post</a></li>
+    <li> <a href="change_the_title.html"> Create a post, then change its title</a></li>
+    <li> <a href="retrieve_all_post_titles.html">Retrieve All Post Titles</a></li>
+    <li> <a href="filter_the_posts.html">Filter the Posts -- gets all posts published in 2019</a></li>
+    <li> <a href="order_post_alpha.html">Alphabetize the Posts</a></li>
+        <li> <a href="delete_a_post.html">Delete a Post</a> Run this only after running <a href="change_the_title.html"> Create a post, then change its title</a></li>
+    <li> <a href="display_a_single_post.html">Display publication status of "Python Discoveries"</a></li>
+    <li> <a href="show_the_post_bodies_truncated.html">Show the Post Bodies Truncated</a></li>
+    <li> <a href="bloggerapigetchron.html">Old Bloggerapiget does not save in the model</a></li>
+        <li> <a href="bloggerapigetall.html" style="color:red">Get all Posts from Blogger and Put Them in the Model</a>.<span> Do not run this unless you're ready to replace the contents of the model</span></li>
+   </ol>
+
+
+
+
+{% endblock content %}
+
+

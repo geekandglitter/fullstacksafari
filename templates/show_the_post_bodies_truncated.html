@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Full Stack Safari</h1>
+  <h2>Post Titles</h2>
+{% for postbody,posttitle in bodiestitles %} # In the view I used Zip because you can't use zip in DTL
+   <p><b>
+
+        {{ posttitle | safe }}
+
+   </b></p>
+
+    {{ postbody |safe|striptags | truncatewords:30|linebreaks }}
+   <p>#############################################################################</p>
+
+  {% endfor %}
+{% endblock content %}
+
+
+ <!--  -->

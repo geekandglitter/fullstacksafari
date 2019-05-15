@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Full Stack Safari</h1>
+  <h2>Post Titles and Bodies</h2>
+{% for postbody,posttitle in bodiestitles %}
+   <p><b>
+
+        {{ posttitle | safe }}
+
+   </b></p>
+
+    {{ postbody |safe|striptags | linebreaks }}
+   <p>#############################################################################</p>
+
+  {% endfor %}
+{% endblock content %}

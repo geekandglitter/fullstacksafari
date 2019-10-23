@@ -1,0 +1,8 @@
+beautifulsoup4
+bs4
+Django
+psycopg2
+psycopg2-binary
+pytz
+soupsieve
+sqlparse 
